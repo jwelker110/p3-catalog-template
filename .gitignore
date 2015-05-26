@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+.sass-cache
+build
+node_modules
+src/assets/.gitignore
+src/assets/.git

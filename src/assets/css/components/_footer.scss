@@ -1,0 +1,93 @@
+//
+// Footer
+// --------------------------------------------------
+
+.footer {
+  position: relative;
+  min-height: $footer-height;
+  padding: $footer-padding;
+  @include clearfix;
+
+  .footer-nav {
+    > li + li {
+      padding-top: $footer-nav-padding-top;
+    }
+    > li > a {
+      display: inline;
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+
+  .title {
+    margin: $footer-title-margin;
+  }
+
+}
+
+
+.footer-default {
+  background-color: $footer-default-bg;
+  border-color: $footer-default-border;
+
+  .footer-text {
+    color: $footer-default-color;
+  }
+
+  .footer-nav {
+    > li > a {
+      color: $footer-default-link-color;
+      background-color: transparent;
+      &:hover,
+      &:focus {
+        color: $footer-default-link-hover-color;
+        background-color: $footer-default-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $footer-default-link-active-color;
+        background-color: $footer-default-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $footer-default-link-disabled-color;
+        background-color: $footer-default-link-disabled-bg;
+      }
+    }
+  }
+
+  // Links in footers
+  //
+  // Add a class to ensure links outside the footer nav are colored correctly.
+  .footer-link {
+    color: $footer-default-link-color;
+    &:hover {
+      color: $footer-default-link-hover-color;
+    }
+  }
+
+  .btn-link {
+    color: $footer-default-link-color;
+    &:hover,
+    &:focus {
+      color: $footer-default-link-hover-color;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: $footer-default-link-disabled-color;
+      }
+    }
+  }
+
+  .title {
+    color: $footer-default-title-color;
+  }
+}

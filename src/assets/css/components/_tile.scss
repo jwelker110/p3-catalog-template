@@ -1,0 +1,42 @@
+//
+// Tile
+// --------------------------------------------------
+
+.tile {
+  color: $tile-color;
+  background: $tile-bg;
+  margin: $tile-margin;
+  padding: $tile-padding;
+  box-shadow: $tile-box-shadow;
+  text-align: center;
+  border: $tile-border;
+  border-radius: $tile-border-radius;
+
+  &-title {
+    color: $tile-title-color;
+    margin: $tile-title-margin;
+    padding: $tile-title-padding;
+  }
+
+  &-caption {
+    color: $tile-caption-color;
+    margin: $tile-caption-margin;
+  }
+
+  &-description {
+    color: $tile-description-color;
+    margin: $tile-description-margin;
+    text-align: justify;
+  }
+
+  > img {
+    max-width: 85%;
+  }
+
+}
+
+.tile:hover {
+  background: $tile-hover-bg;
+  box-shadow: $tile-hover-box-shadow;
+  cursor: $tile-hover-cursor;
+}

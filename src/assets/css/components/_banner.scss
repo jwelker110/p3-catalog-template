@@ -1,0 +1,33 @@
+//
+// Banner
+// --------------------------------------------------
+
+
+.banner {
+  background: $banner-bg;
+  padding: $banner-padding;
+  text-align: center;
+  border-bottom: $banner-border-bottom;
+  height: $banner-height;
+
+  // Modify bootstrap's page-header when in the banner
+  .page-header {
+    display: inline-block;
+    margin: 0 $banner-center-gutter 0 0;
+    padding: 0;
+    vertical-align: middle;
+    text-align: right;
+    border: none;
+
+    > .banner-title {
+      color: $banner-color;
+      margin: 0 5px;
+
+      .banner-subtitle {
+        color: tint($banner-color, 40%);
+        display: block;
+      }
+    }
+  }
+
+}
