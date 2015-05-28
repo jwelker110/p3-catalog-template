@@ -13,5 +13,9 @@ module.exports = {
     },
     options: {
         livereload: true
+    },
+    js: {
+        files: '<%= conf.path.javascript %>/**/*.js',
+        tasks: ['concat']
     }
 };
