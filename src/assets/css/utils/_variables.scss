@@ -191,7 +191,6 @@ $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
 $btn-link-disabled-color:        $gray-light !default;
 
-
 //== Forms
 //
 //##
@@ -813,7 +812,7 @@ $well-border:                 darken($well-bg, 7%) !default;
 //
 //##
 
-$tile-box-shadow-color:       $gray !default;
+$tile-box-shadow-color:       $box-shadow-color !default;
 $tile-box-shadow:             0px 0px 10px 2px $tile-box-shadow-color !default;
 $tile-bg:                     #fff !default;
 $tile-color:                  $text-color !default;
@@ -822,7 +821,7 @@ $tile-caption-color:          $tile-color !default;
 $tile-description-color:      $tile-color !default;
 
 $tile-margin:                 25px 0px 0px 0px !default;
-$tile-padding:                10px !default;
+$tile-padding:                0px 10px 10px 10px !default;
 $tile-border:                 none !default;
 $tile-border-radius:          0px !default;
 $tile-title-margin:           10px 0px !default;
@@ -887,6 +886,11 @@ $carousel-indicator-border-color:             #fff !default;
 $carousel-caption-color:                      #fff !default;
 
 // Carousel w/slider control
+$carousel-title-font-size:            36px !default;
+$carousel-title-font-size-small:      $carousel-title-font-size / 2 !default;
+$carousel-title-line-height:          $carousel-title-font-size !default;
+$carousel-title-line-height-small:    $carousel-title-font-size-small;
+
 $carousel-slider-color:               #000 !default;
 $carousel-slider-bg:                  #666 !default;
 
@@ -894,6 +898,13 @@ $carousel-slider-height:              20px !default;
 
 $carousel-slider-border:              transparent !default;
 $carousel-slider-border-radius:       5px !default;
+
+$carousel-control-hover-shadow:       0px 0px 10px 0px $font-color !default;
+$carousel-control-hover-color:        $font-color !default;
+$carousel-control-hover-bg:           #dbdbdb !default;
+$carousel-control-active-shadow:      0px 0px 5px 0px $font-color !default;
+$carousel-control-active-color:       $font-color !default;
+$carousel-control-active-bg:          #d5d5d5 !default;
 
 
 // if carousel image is being utilized, this should be adjusted accordingly

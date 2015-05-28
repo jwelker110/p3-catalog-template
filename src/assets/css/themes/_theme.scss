@@ -1,1 +1,218 @@
-@import "gamer-review";
+@import "player-critic";
+
+body {
+  background: $theme-bg;
+  font-size: $font-size-base;
+}
+
+/*
+ * Changing base font size
+ */
+
+@media screen and (max-width: 480px){
+  body{
+    font-size: $font-size-base - 4;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px){
+  body{
+    font-size: $font-size-base - 3;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+  body{
+    font-size: $font-size-base - 2;
+  }
+}
+
+/*
+ * NAVBAR
+ */
+.navbar {
+  color: $font-color;
+}
+
+.nav-container {
+  background: $theme-gray;
+  box-shadow: $navbar-box-shadow;
+}
+
+.navbar-nav > li > a:hover {
+  background: #ccc !important;
+  box-shadow: 0px 1px 5px 1px $tile-box-shadow-color;
+}
+
+.navbar-nav > li > a:active,
+.active-nav, .active-nav:hover {
+  box-shadow: inset 0px 2px 10px -3px $tile-box-shadow-color !important;
+  background: #ccc !important;
+}
+
+.active-nav:hover {
+  cursor: default;
+}
+
+nav.navbar.navbar-default.navbar-center {
+  line-height: 0 !important;
+}
+.dropdown-menu > li {
+  font-style: italic;
+}
+
+.navbar-brand {
+  display: none;
+}
+
+@media screen and (max-width: 767px){
+
+  /*
+   * Hidden elements
+   */
+  .banner,
+  .carousel {
+    display: none !important;
+  }
+  //=============================
+
+  .navbar-brand {
+    display: inline-block;
+  }
+
+  .collapse.in,
+  .collapsing{
+    float: left;
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 65px;
+    background: $theme-gray;
+    box-shadow: 0px 0px 10px 5px #999;
+  }
+
+}
+
+
+/*
+ * BUTTONS
+ */
+.btn {
+
+  &:focus,
+  &:active:focus {
+    color: $btn-active-color;
+    box-shadow: $btn-active-shadow;
+    background: $btn-active-bg;
+    border: $btn-active-border;
+    outline: $btn-active-outline;
+  }
+
+  &-default {
+
+    &:hover {
+      color: $btn-hover-color;
+      box-shadow: $btn-hover-shadow;
+      background: $btn-hover-bg;
+      border: $btn-hover-border;
+      outline: $btn-hover-outline;
+    }
+
+    &:active {
+      color: $btn-active-color;
+      box-shadow: $btn-active-shadow;
+      background: $btn-active-bg;
+      border: $btn-active-border;
+      outline: $btn-active-outline;
+    }
+  }
+
+}
+
+
+/*
+ * RATING
+ */
+.rating {
+  border-radius: 0px;
+  font-weight: bold;
+  padding: 1px 6px;
+
+  &-success {
+    background: $brand-success;
+  }
+
+  &-warning {
+    background: $brand-warning;
+  }
+
+  &-danger {
+    background: $brand-danger;
+  }
+}
+
+
+/*
+ * FOOTER
+ */
+.footer-sticky .container {
+  text-align: center;
+  margin-top: 25px;
+  padding: 10px 0;
+  background: $theme-gray;
+  box-shadow: $footer-box-shadow;
+}
+
+// Animate the Footer
+.footer-sticky {
+
+  .animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+
+/*
+ * Some queries, yo'
+ */
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .carousel-title {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .carousel-title {
+    font-size: 1.5em;
+  }
+}

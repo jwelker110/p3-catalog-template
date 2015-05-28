@@ -47,7 +47,7 @@
         } else {
             indicatorPosition = indicatorWidth * itemIndex;
         }
-        carouselIndicator.css({'margin-left': indicatorPosition + 'px'});
+        carouselIndicator.animate({'margin-left': indicatorPosition + 'px'}, 500);
     }
 
     /*

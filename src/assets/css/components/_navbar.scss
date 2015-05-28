@@ -681,6 +681,9 @@
 
   .navbar-center {
     text-align: center;
+    z-index: 1;
+    background: $navbar-default-bg;
+    font-weight: bold;
 
     .dropdown-menu {
       text-align: center;

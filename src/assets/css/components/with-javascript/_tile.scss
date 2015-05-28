@@ -14,8 +14,8 @@
 
   &-title {
     color: $tile-title-color;
-    margin: $tile-title-margin;
-    padding: $tile-title-padding;
+    margin: 0;
+    padding: 10px 0;
   }
 
   &-caption {
@@ -29,7 +29,7 @@
     text-align: justify;
   }
 
-  > img {
+  &-image {
     max-width: 85%;
   }
 

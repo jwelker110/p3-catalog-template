@@ -235,15 +235,29 @@
 //
 
 .carousel-title {
+  font-size: $carousel-title-font-size;
+  line-height: $carousel-title-line-height;
   text-align: center;
   margin: 10px auto;
+  display: block;
 }
 
 .carousel-image {
   text-align: center;
 
+  div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   img {
     max-width: 100%;
+  }
+
+  &-caption {
+    display: block;
+    margin-top: 5px;
   }
 }
 
@@ -256,20 +270,6 @@
     padding: $carousel-description-padding;
     background: $carousel-description-bg;
     border-radius: $carousel-description-radius;
-  }
-}
-
-.carousel-image {
-
-  div {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &-caption {
-    display: block;
-    margin-top: 5px;
   }
 }
 
@@ -288,7 +288,7 @@
 
 
 .carousel-progress {
-  background: tint($carousel-slider-bg, 30%);
+  background: $carousel-progress-bg;
 }
 
 .carousel-slider-control,
@@ -301,24 +301,12 @@
 }
 
 .carousel-progress-indicator {
-//  position: absolute;
   background: $carousel-slider-bg;
   display: block;
   height: $carousel-slider-height;
   width: 75px;
   border: $carousel-slider-border;
   border-radius: $carousel-slider-border-radius;
-}
-
-.carousel-slider-control:hover {
-  color: tint($carousel-slider-color, 30%);
-  background: tint($carousel-slider-bg, 30%);
-  cursor: pointer;
-}
-
-.carousel-slider-control:active,
-.carousel-slider-control:focus {
-  color: $carousel-slider-color;
 }
 
 .carousel-slider-control {
@@ -329,15 +317,37 @@
   height: $carousel-slider-height;
 
   > .glyphicon {
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    color: tint($carousel-slider-color, 30%);
+    background: tint($carousel-slider-bg, 30%);
+    cursor: pointer;
+  }
+
+  &:active,
+  &:focus {
+    color: $carousel-slider-color;
   }
 }
 
 @media screen and (max-width: $grid-float-breakpoint-max){
-  .carousel-image {
-    display: none;
+  .carousel {
+
+    &-image {
+      display: none;
+    }
+
+    &-title {
+      font-size: $carousel-title-font-size-small;
+      line-height: $carousel-title-line-height-small;
+    }
   }
+
 }
 
 

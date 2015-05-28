@@ -1,5 +1,5 @@
 // Theme variables
-@import "themes/theme";
+@import "themes/player-critic";
 
 // Core variables and mixins
 @import "utils/variables";
@@ -42,7 +42,7 @@
 @import "components/wells";
 @import "components/close";
 @import "components/banner";
-@import "components/tile";
+@import "components/with-javascript/tile";
 @import "components/flipper";
 @import "components/footer";
 
@@ -56,3 +56,6 @@
 // Utility classes
 @import "utils/utilities";
 @import "utils/responsive-utilities";
+
+// Custom theme css
+@import "themes/theme";

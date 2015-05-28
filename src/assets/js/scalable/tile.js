@@ -6,10 +6,17 @@
 +function($){
 
     //Animate in the tiles when the page first loads
-    // TODO animate in the tiles
-    //$(".tile").hide().first().show("fast", function showNext() {
-    //    $(this).next().show("fast", showNext);
-    //});
+    var tiles = $(".tile");
+    tiles.css({opacity: 0});
+
+    function showElement(element){
+        $(element).animate({opacity: 1}, 1500);
+        setTimeout(function(){
+            showElement(element.parent().next().find(".tile"));
+        }, 300);
+    }
+
+    showElement(tiles.first());
 
     var breakpoint = 0;
 
@@ -18,7 +25,7 @@
     $(window).resize(function () {
         if (window.matchMedia("screen and (min-width: 1200px)").matches && breakpoint != 1200) {
             breakpoint = 1200;
-            resizeTiles(3); // Current tiles in the row
+            resizeTiles(4); // Current tiles in the row
         } else if (window.matchMedia("screen and (min-width: 992px) and (max-width: 1199px)").matches && breakpoint != 992) {
             breakpoint = 992;
             resizeTiles(3); // Current tiles in the row
