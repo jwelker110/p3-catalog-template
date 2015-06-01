@@ -2,7 +2,7 @@ $bootstrap-sass-asset-helper: false !default;
 //
 // Variables
 // --------------------------------------------------
-
+@import "../utils/mixins/functions";
 
 //== Colors
 //
@@ -829,8 +829,8 @@ $tile-title-padding:          10px 0px 0px !default;
 $tile-caption-margin:         $tile-title-margin !default;
 $tile-description-margin:     $tile-title-margin !default;
 
-$tile-hover-bg:               shade($tile-bg, 7.5%) !default;
-$tile-hover-box-shadow:       0px 0px 10px 2px tint($tile-box-shadow-color, 15%) !default;
+$tile-hover-bg:               darken($tile-bg, 7.5%) !default;
+$tile-hover-box-shadow:       0px 0px 10px 2px lighten($tile-box-shadow-color, 15%) !default;
 $tile-hover-cursor:           pointer !default;
 
 
