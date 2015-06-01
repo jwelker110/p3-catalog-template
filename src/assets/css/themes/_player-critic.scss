@@ -8,7 +8,7 @@
 ////
 ////## Gray and brand colors for use across Bootstrap.
 //
-
+@import "../utils/mixins/functions";
 
 $gray-base:              #000;
 //$gray-darker:            lighten($gray-base, 13.5%); // #222
@@ -58,7 +58,7 @@ $font-family-sans-serif:    "Alegreya SC", "Helvetica Neue", Helvetica, Arial, s
 //$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 //$font-family-base:        $font-family-sans-serif;
 //
-$font-size-base:          16px;
+$font-size-base:          20px;
 //$font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
 //$font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
 //
@@ -862,8 +862,8 @@ $footer-box-shadow:                     0px -2px 10px 1px $box-shadow-color;
 //$tile-caption-margin:         $tile-title-margin;
 //$tile-description-margin:     $tile-title-margin;
 //
-//$tile-hover-bg:               shade($tile-bg, 7.5%);
-//$tile-hover-box-shadow:       0px 0px 10px 2px tint($tile-box-shadow-color, 15%);
+//$tile-hover-bg:               darken($tile-bg, 7.5%);
+//$tile-hover-box-shadow:       0px 0px 10px 2px lighten($tile-box-shadow-color, 15%);
 //$tile-hover-cursor:           pointer;
 //
 //
@@ -926,7 +926,7 @@ $carousel-slider-bg:                  $theme-gray;
 //
 //$carousel-slider-border:              transparent;
 $carousel-slider-border-radius:       10px;
-$carousel-progress-bg:                tint($carousel-slider-bg, 35%);
+$carousel-progress-bg:                lighten($carousel-slider-bg, 35%);
 //
 //
 //// if carousel image is being utilized, this should be adjusted accordingly
