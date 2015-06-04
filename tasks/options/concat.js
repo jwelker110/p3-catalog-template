@@ -13,12 +13,10 @@ module.exports = {
             "<%= conf.path.javascript %>/vendors/bootstrap/scrollspy.js",
             "<%= conf.path.javascript %>/vendors/bootstrap/tab.js",
             "<%= conf.path.javascript %>/vendors/bootstrap/affix.js",
-            "<%= conf.path.javascript %>/vendors/jquery.tablesorter.js",
             "<%= conf.path.javascript %>/vendors/enquire.js",
             "<%= conf.path.javascript %>/scalable/footer-sticky.js",
             "<%= conf.path.javascript %>/scalable/tile.js",
-            "<%= conf.path.javascript %>/custom/review_modal.js",
-            "<%= conf.path.javascript %>/custom/index.js"
+            "<%= conf.path.javascript %>/custom/review_modal.js"
 
         ],
         dest: '<%= conf.path.build %>/js/bootstrap.js'
