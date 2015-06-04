@@ -1,7 +1,7 @@
 module.exports = {
     css: {
         files: '<%= conf.path.css %>/**/*.scss',
-        tasks: ['compass']
+        tasks: ['sass']
     },
     html: {
         files: 'src/**/*.html',
@@ -17,5 +17,9 @@ module.exports = {
     js: {
         files: '<%= conf.path.javascript %>/**/*.js',
         tasks: ['concat']
+    },
+    fonts: {
+        files: '<%= conf.path.fonts %>/*.tff',
+        tasks: ['ttf2eot']
     }
 };

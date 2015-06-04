@@ -14,7 +14,8 @@ module.exports = {
                 },
                 component: {
                     carousel: '<%= conf.path.assets %>/fixtures/components/carousel.html',
-                    tile: '<%= conf.path.assets %>/fixtures/components/tile.html'
+                    tile: '<%= conf.path.assets %>/fixtures/components/tile.html',
+                    review_modal: '<%= conf.path.assets %>/fixtures/components/review_modal.html'
                 }
             },
             styles: {
