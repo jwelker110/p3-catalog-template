@@ -2,12 +2,14 @@
 
 @font-face {
   font-family: customFonts;
-  src: url(../fonts/gamer-review-font.ttf);
+  src: url('../fonts/gamer-review-font.woff') format('woff'),
+       url('../fonts/gamer-review-font.ttf') format('truetype'),
+       url('../fonts/gamer-review-font.svg#webfont') format('svg');
 }
 
-* {
-  outline: solid red 1px;
-}
+//* {
+//  outline: solid red 1px;
+//}
 
 .gamer-review-glyph {
 
@@ -30,8 +32,6 @@
   &.glyphicon-google-plus {
     height: 42px;
     display: inline-block;
-//    position: absolute;
-//    bottom: 0;
   }
 
 
@@ -46,15 +46,22 @@ body {
  * Changing base font size
  */
 
+@media screen and (max-width: 767px){
+  body {
+    font-size: $font-size-base - 1;
+  }
+}
+
 @media screen and (max-width: 480px){
   body{
-    font-size: $font-size-base - 2;
+    font-size: $font-size-base - 3;
   }
 }
 
 /*
  * NAVBAR
  */
+
 .navbar {
   color: $font-color;
 }
@@ -122,11 +129,12 @@ nav.navbar.navbar-default.navbar-center {
 
 }
 
-
 /*
  * BUTTONS
  */
+
 .btn {
+  font-weight: bold;
 
   &:focus,
   &:active:focus {
@@ -159,32 +167,145 @@ nav.navbar.navbar-default.navbar-center {
     }
   }
 
+  &-facebook {
+    color: $font-color;
+    font-weight: normal;
+
+    &:hover {
+      text-decoration: none;
+      color: #4862A3;
+    }
+  }
+
+  &-google {
+    color: $font-color;
+    font-weight: normal;
+
+    &:hover {
+      text-decoration: none;
+      color: #DD4B39;
+    }
+  }
+
 }
 
-.facebook-login{
-  margin: auto 5px;
-  color: $font-color;
+/*
+ * FORMS
+ */
 
-  &:hover {
-    text-decoration: none;
-    color: #4862A3;
+.custom-form, {
+  max-width: 500px;
+  margin: 25px auto;
+  box-shadow: $tile-box-shadow;
+  padding: 15px;
+  text-align: center;
+
+  .form-background {
+    background: $theme-gray;
+    border-radius: 25px;
+    display: block;
+    padding: 15px 20px 1px;
+    margin-bottom: 15px;
+  }
+
+  .form-title {
+    font-weight: bold;
+    font-size: 1.8em;
+    text-align: center;
   }
 }
 
-.google-login{
-  margin: auto 5px;
-  color: $font-color;
+/*
+ * MODAL CONTENTS
+ */
 
-  &:hover {
-    text-decoration: none;
-    color: #DD4B39;
+.modal {
+
+  &-content {
+    border-radius: 0px;
+  }
+
+  &-header {
+    border: none;
+    min-height: 30px;
+    padding: 0;
+    text-align: center;
+
+    .close {
+      margin: 2px;
+    }
+  }
+
+}
+
+#review-text {
+  width: 100%;
+}
+
+.review-form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0px auto;
+  box-shadow: none;
+  text-align: center;
+
+  .form-background {
+    background: $theme-gray;
+    border-radius: 25px;
+    display: block;
+    padding: 15px 20px 1px;
+    margin-bottom: 15px;
+  }
+
+  .form-title {
+    font-weight: bold;
+    font-size: 1.8em;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 15px;
   }
 }
+
+#review-submit-btn {
+  float: right;
+  margin-right: 35px;
+}
+
+#add-review-title {
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+@media screen and (max-width: 991px){
+  #add-review-title {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #review-submit-btn {
+    float: none;
+    margin-right: 0px;
+  }
+
+  #add-review-title {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 480px){
+  #add-review-title {
+    font-size: 1.1em;
+  }
+}
+
+
 
 
 /*
  * RATING
  */
+
 .rating {
   border-radius: 0px;
   font-weight: bold;
@@ -201,12 +322,32 @@ nav.navbar.navbar-default.navbar-center {
   &-danger {
     background: $brand-danger;
   }
-}
 
+  &-review {
+    background: $theme-gray;
+
+    &:hover {
+      color: $btn-hover-color;
+      box-shadow: $btn-hover-shadow;
+      background: $btn-hover-bg;
+      border: $btn-hover-border;
+      outline: $btn-hover-outline;
+    }
+
+    &:active {
+      color: $btn-active-color;
+      box-shadow: $btn-active-shadow;
+      background: $btn-active-bg;
+      border: $btn-active-border;
+      outline: $btn-active-outline;
+    }
+  }
+}
 
 /*
  * Some queries, yo'
  */
+
 @media screen and (min-width: 768px) and (max-width: 991px){
   .carousel-title {
     font-size: 1.8em;
