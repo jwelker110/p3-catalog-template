@@ -45,16 +45,21 @@ body {
 /*
  * Changing base font size
  */
+@media screen and (max-width: 991px){
+  body {
+    font-size: $font-size-base - 2;
+  }
+}
 
 @media screen and (max-width: 767px){
   body {
-    font-size: $font-size-base - 1;
+    font-size: $font-size-base - 4;
   }
 }
 
 @media screen and (max-width: 480px){
   body{
-    font-size: $font-size-base - 3;
+    font-size: $font-size-base - 6;
   }
 }
 
@@ -192,6 +197,9 @@ nav.navbar.navbar-default.navbar-center {
 /*
  * FORMS
  */
+.form-control {
+  font-size: inherit;
+}
 
 .custom-form, {
   max-width: 500px;
