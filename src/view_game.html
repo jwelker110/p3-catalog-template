@@ -3,7 +3,7 @@
 <head>
     <!-- build:section recursive head-prefix --><!-- /build -->
     <link rel="stylesheet" href="css/pages/view_game.css">
-    <title>Gamer Review | Find A Game</title>
+    <title>Gamer Review | Game Title</title>
 </head>
 <body>
 <!-- build:section layout.banner --><!-- /build -->
@@ -75,11 +75,20 @@
                 jowl corned beef, cow chuck doner landjaeger prosciutto pig bacon strip
                 steak short ribs picanha. Short loin brisket tail bresaola short ribs.</p>
         </div>
-        <div class="review-action">
-            <a href="#" class="review-btn reply">Reply</a>
+        <div class="game-review-reply" data-replyid="1" data-shown="false">
+            <form class="form-horizontal" action="#">
+                <textarea class="game-review-reply-text" maxlength="1000" placeholder="Reply here..." name="reply-text" rows="5"></textarea>
+            </form>
         </div>
+        <div class="review-action">
+            <span class="review-btn reply" data-actionid="1">Reply</span>
+        </div>
+
     </div>
-    <div class="review-reply" data-review-id="1">
+    <!-- Comment submission field. Hidden until user chooses "reply" -->
+
+    <!-- End comment submission -->
+    <div class="review-reply" data-review-id="2">
         <div class="game-review-author">
             <a href="#" class="review-btn author" data-user-id="2">TestUser123</a> Replied:
         </div>
@@ -92,11 +101,8 @@
                 jowl corned beef, cow chuck doner landjaeger prosciutto pig bacon strip
                 steak short ribs picanha. Short loin brisket tail bresaola short ribs.</p>
         </div>
-        <div class="review-action">
-            <a href="#" class="review-btn reply">Reply</a>
-        </div>
     </div>
-    <div class="review-reply" data-review-id="1">
+    <div class="review-reply" data-review-id="3">
         <div class="game-review-author">
             <a href="#" class="review-btn author" data-user-id="2">TestUser123</a> Replied:
         </div>
@@ -109,11 +115,8 @@
                 jowl corned beef, cow chuck doner landjaeger prosciutto pig bacon strip
                 steak short ribs picanha. Short loin brisket tail bresaola short ribs.</p>
         </div>
-        <div class="review-action">
-            <a href="#" class="review-btn reply">Reply</a>
-        </div>
     </div>
-    <div class="review-reply" data-review-id="1">
+    <div class="review-reply" data-review-id="4">
         <div class="game-review-author">
             <a href="#" class="review-btn author" data-user-id="2">TestUser123</a> Replied:
         </div>
@@ -126,11 +129,8 @@
                 jowl corned beef, cow chuck doner landjaeger prosciutto pig bacon strip
                 steak short ribs picanha. Short loin brisket tail bresaola short ribs.</p>
         </div>
-        <div class="review-action">
-            <a href="#" class="review-btn reply">Reply</a>
-        </div>
     </div>
-    <div class="game-review" data-review-id="1">
+    <div class="game-review" data-review-id="5">
         <div class="game-review-author">
             <a href="#" class="review-btn author" data-user-id="2">TestUser123</a> (9/10) Wrote:
         </div>
