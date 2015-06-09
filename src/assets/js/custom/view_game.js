@@ -13,6 +13,8 @@
         hideText: 'Less...'
     });
 
+    setListeners();
+
     // Listeners to handle comments posted
     $('.reply').on('click', function(event){
         // get btn that was clicked
@@ -51,12 +53,17 @@
                         $(reply).css({'display': 'none'});
                         reply.data('shown', false);
 
+                        // reset the listeners on the page
+                        clearListeners();
+                        setListeners();
+
                     }).fail(function(data){
                         // clear previous alerts
                         $('.alert').remove();
                         // if comment submission fails, alert the user.
                         form.before('<div class="alert alert-danger">Could not submit comment. Please try again.</div>')
                     });
+
             }
         } else {
             // clear previous alerts
@@ -67,6 +74,14 @@
         }
     });
 
+}(jQuery);
+
+function clearListeners(){
+    // Listeners to redirect users to author profiles
+    $('.author').off();
+}
+
+function setListeners(){
     // Listeners to redirect users to author profiles
     $('.author').on('click', function(event){
         // get the btn that was pressed
@@ -74,5 +89,4 @@
         var userId = btn.data('user-id');
         window.location = '/view/profile/' + userId + '/'
     });
-
-}(jQuery);
+}
