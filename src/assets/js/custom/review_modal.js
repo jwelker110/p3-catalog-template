@@ -18,5 +18,25 @@
         }
     });
 
+    // ajax call to submit a review from the modal
+    $('#review-submit-btn').on('click', function(event){
+        // grabbing the form contents
+        var name = $('#choose-game').val();
+        var rating = $('#choose-rating').val();
+        var review = $('#review-text').val();
+
+        $.post("/add_review/", {game_simple_name: name, game_rating: rating, game_review: review})
+            .done(function(data){
+                window.location.reload();
+            })
+            .fail(function(data){
+                // clear previous alerts
+                $('.alert').remove();
+                // if comment submission fails, alert the user.
+                $('.form-background .form-group').first().before('<div class="alert alert-danger">Could not submit review. Please try again.</div>')
+            });
+
+    })
+
 }(jQuery);
 
