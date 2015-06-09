@@ -697,8 +697,8 @@ $footer-box-shadow:                     0px -2px 10px 1px $box-shadow-color;
 ////
 ////## Define alert colors, border radius, and padding.
 //
-//$alert-padding:               15px;
-//$alert-border-radius:         $border-radius-base;
+$alert-padding:               0px 8px;
+$alert-border-radius:         0px;
 //$alert-link-font-weight:      bold;
 //
 //$alert-success-bg:            $state-success-bg;
