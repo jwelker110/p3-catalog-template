@@ -1,0 +1,47 @@
+@import "../themes/player-critic";
+@import "../utils/variables";
+
+/*
+ * LOGIN PAGE
+ */
+
+#login-signup-message {
+  text-align: center;
+
+  span {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  #login-container {
+    margin-top: -170px;
+  }
+}
+
+@media (max-width: 767px) {
+  #login-container, #signup-container {
+    position: relative;
+    height: 100vh;
+  }
+
+  .custom-form {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+
+    > span > .form-group > label {
+      display: none;
+    }
+  }
+
+  #login-signup-message{
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+    right: 0;
+  }
+}

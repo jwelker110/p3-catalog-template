@@ -1,0 +1,93 @@
+@import "../themes/player-critic";
+@import "../utils/variables";
+
+
+/*
+ * TABLE
+ */
+
+table {
+  margin-top: 15px;
+
+}
+
+#rating-column {
+  width: 25%;
+}
+
+@media screen and (max-width: 480px){
+  #rating-column {
+    width: 21%;
+  }
+}
+
+td {
+  color: $font-color;
+
+  &:hover {
+    text-decoration: none;
+    background: #ccc !important;
+    box-shadow: 0px 1px 5px 1px $tile-box-shadow-color;
+    cursor: pointer;
+  }
+
+  &:active {
+    box-shadow: inset 0px 2px 10px -3px $tile-box-shadow-color !important;
+    background: #ccc !important;
+  }
+
+  .active-nav:hover {
+    cursor: default;
+  }
+}
+
+.header {
+  background: url(../../images/small.gif) no-repeat center right;
+  cursor: pointer;
+}
+
+.headerSortDown {
+  background: url(../../images/small_asc.gif) no-repeat center right;
+  cursor: pointer;
+}
+
+.headerSortUp {
+  background: url(../../images/small_desc.gif) no-repeat center right;
+  cursor: pointer;
+}
+
+
+#pager, .pagedisplay, .pagesize {
+  text-align: center;
+  height: 34px;
+}
+
+.first, .prev, .next, .last {
+  padding: 3px;
+  height: 34px;
+  width: 34px;
+  line-height: 26px;
+
+  &:hover {
+    outline: solid 1px #ccc;
+    cursor: pointer;
+  }
+}
+
+.first, .prev {
+  float: left;
+}
+
+.next, .last {
+  float: right;
+}
+
+/*
+ * TEXT
+ */
+
+@media screen and (max-width: 480px) {
+  .hide-text {
+    display: none;
+  }
+}

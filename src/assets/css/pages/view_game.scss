@@ -1,0 +1,193 @@
+@import "../themes/player-critic";
+@import "../utils/variables";
+
+/*
+ * GAME DETAILS
+ */
+
+.game {
+
+  &-image,
+  &-rating {
+    text-align: center;
+  }
+
+  &-image {
+    > img {
+      max-width: 100%;
+    }
+  }
+
+  &-details,
+  &-review {
+    margin-top: 25px;
+    box-shadow: $tile-box-shadow;
+  }
+
+  &-title {
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  &-description {
+    padding: 5px;
+  }
+
+  &-description-text {
+    background: $carousel-description-bg;
+    border-radius: 25px;
+    padding: 10px;
+    height: 180px;
+
+    > p {
+      overflow-x: hidden;
+      overflow-y: scroll;
+      max-height: 125px;
+      margin: 0px;
+    }
+  }
+
+  &-description-author {
+    display: block;
+    padding-top: 5px;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: right;
+  }
+
+  &-description-stats,
+  &-description-action {
+    font-weight: bold;
+    display: inline-block;
+    width: 49%;
+  }
+
+  &-description-action {
+    text-align: right;
+  }
+
+  &-stats,
+  &-rating {
+    padding: 5px 15px;
+  }
+
+  &-review-btn {
+    padding: 1px 3px;
+    background: $carousel-description-bg;
+
+    &:hover {
+      background: #ccc !important;
+      box-shadow: 0px 1px 5px 1px $tile-box-shadow-color;
+      cursor: pointer;
+    }
+
+  }
+
+  &-detail-row {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+}
+
+@media screen and (max-width: 767px){
+  .hide-sm {
+    display: none;
+  }
+}
+
+/*
+ * GAME REVIEW
+ */
+
+.game-review {
+  float: right;
+
+  &-author {
+    font-weight: bold;
+    padding: 5px 15px;
+    text-align: left;
+
+  }
+
+  &-text {
+    padding: 5px 15px;
+
+    > p {
+      margin: 0;
+    }
+  }
+}
+
+.review {
+
+  &-action {
+    padding: 5px 20px;
+    text-align: right;
+  }
+}
+
+.review-reply {
+  float: right;
+  width: 90%;
+  margin-top: 25px;
+  box-shadow: $tile-box-shadow;
+}
+
+/*
+ * GAME REVIEW REPLY
+ */
+
+.game-review-reply {
+  display: none;
+  width: 100%;
+  padding: 5px 15px;
+
+  &-text {
+    width: 100%;
+  }
+}
+
+/*
+ * BUTTONS
+ */
+
+.review-btn {
+  color: $font-color;
+  padding: 1px 3px;
+  background: $carousel-description-bg;
+  font-weight: bold;
+
+  &:focus,
+  &:active:focus {
+    text-decoration: none;
+    color: $btn-active-color;
+    box-shadow: $btn-active-shadow;
+    background: $btn-active-bg;
+    border: $btn-active-border;
+    outline: $btn-active-outline;
+  }
+
+  &:hover {
+    text-decoration: none;
+    box-shadow: 0px 1px 5px 1px $tile-box-shadow-color;
+    color: $btn-hover-color;
+    background: $btn-hover-bg;
+    border: $btn-hover-border;
+    outline: $btn-hover-outline;
+    cursor: pointer;
+  }
+
+  &:active {
+    text-decoration: none;
+    box-shadow: 0px 0px 3px 0px $tile-box-shadow-color;
+    color: $btn-hover-color;
+    background: $btn-hover-bg;
+    border: $btn-hover-border;
+    outline: $btn-hover-outline;
+    cursor: pointer;
+  }
+}

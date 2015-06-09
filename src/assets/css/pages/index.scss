@@ -1,0 +1,82 @@
+@import "../themes/player-critic";
+@import "../utils/variables";
+/*
+ *  MOBILE-INDEX
+ */
+
+.mobile-index {
+  display: none;
+}
+
+@media screen and (max-width: 767px){
+  .mobile-index {
+    display: inherit;
+    margin-top: 25px;
+    text-align: center;
+
+    > form {
+      padding: 25px 10px;
+      margin: 10px auto;
+      box-shadow: $tile-box-shadow;
+
+      button {
+        margin: 5px;
+      }
+    }
+  }
+}
+
+
+/*
+ * CAROUSEL
+ */
+.carousel {
+  background: #ffffff;
+  margin: 25px auto 0px auto;
+  box-shadow: $tile-box-shadow;
+
+  &-inner {
+    height: 400px;
+  }
+
+  &-title {
+    font-size: 2.2em;
+  }
+
+  &-image-caption {
+    margin: 10px auto;
+  }
+
+  &-slider {
+    padding: 10px;
+  }
+
+  &-slider-control {
+
+    &:hover {
+      color: $carousel-control-hover-color;
+      box-shadow: $carousel-control-hover-shadow;
+      background: $carousel-control-hover-bg;
+    }
+
+    &:active {
+      color: $carousel-control-active-color;
+      box-shadow: $carousel-control-active-shadow;
+      background: $carousel-control-active-bg;
+    }
+
+  }
+
+}
+
+
+/*
+ * TILES
+ */
+.tile {
+
+  &-title {
+    font-weight: bold;
+  }
+}
+
