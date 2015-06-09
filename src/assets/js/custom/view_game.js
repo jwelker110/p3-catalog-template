@@ -33,7 +33,7 @@
 
             if (formText) {
                 // perform ajax call to submit comment
-                var req = $.post("/add_comment/", {post_id: id, text: formText})
+                $.post("/add_comment/", {post_id: id, text: formText})
                     .done(function(data){
                         form.val('');
                         var htmlStr = "";
