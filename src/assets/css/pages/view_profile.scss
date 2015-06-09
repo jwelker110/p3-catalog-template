@@ -1,0 +1,93 @@
+@import "../themes/player-critic";
+@import "../utils/variables";
+
+/*
+ * PROFILE
+ */
+
+.profile {
+  margin-top: 25px;
+  box-shadow: $tile-box-shadow;
+
+  &-avatar {
+    padding: 5px;
+    text-align: center;
+  }
+
+  &-username {
+    font-weight: bold;
+    font-size: 1.5em;
+    display: block;
+    text-align: center;
+    background: $theme-gray;
+    border-bottom: solid 1px $font-color;
+  }
+
+  &-details-labels {
+    display: inline-block;
+    width: 49%;
+  }
+
+  &-details {
+    display: inline-block;
+    width: 49%;
+  }
+
+  &-label {
+    display: block;
+    text-align: right;
+    margin: 10px auto;
+    font-weight: bold;
+  }
+
+  &-detail {
+    display: block;
+    text-align: left;
+    margin: 10px auto;
+  }
+}
+
+/*
+ * REVIEW
+ */
+/*
+ * GAME REVIEW
+ */
+
+.game-review {
+  margin-top: 25px;
+  box-shadow: $tile-box-shadow;
+  float: right;
+
+  &-author {
+    font-weight: bold;
+    padding: 5px 15px;
+    text-align: left;
+
+  }
+
+  &-text {
+    padding: 5px 15px;
+
+    > p {
+      margin: 0;
+    }
+  }
+}
+
+.review {
+
+  &-action {
+    padding: 5px 20px;
+    text-align: right;
+  }
+}
+
+.review-reply {
+  float: right;
+  width: 90%;
+  margin-top: 25px;
+  box-shadow: $tile-box-shadow;
+}
+
+
