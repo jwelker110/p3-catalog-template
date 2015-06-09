@@ -2,14 +2,67 @@
 <html lang="en">
 <head>
     <!-- build:section recursive head-prefix --><!-- /build -->
-    <link rel="stylesheet" href="css/pages/view_game.css">
+    <link rel="stylesheet" href="css/pages/view_profile.css">
     <title>Gamer Review | View Profile</title>
 </head>
 <body>
 <!-- build:section layout.banner --><!-- /build -->
 <!-- build:section layout.navbar --><!-- /build -->
 <!-- build:section component.review_modal --><!-- /build -->
+<div class="container">
+    <div class="profile">
+        <div class="row">
+            <div class="col-xs-12">
+                <span class="profile-username">TestUser123</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="profile-avatar hide-sm">
+                    <img src="https://i.imgur.com/5MWCbre.jpg" height="200px" width="200px">
+                </div>
+            </div>
+            <div class="col-sm-8 col-xs-12">
+                <div class="profile-details-labels">
+                    <span class="profile-label">Joined: </span>
+                    <span class="profile-label">Last Active: </span>
+                    <span class="profile-label">Total Reviews: </span>
+                    <span class="profile-label">Highest Rating: </span>
+                    <span class="profile-label">Avg. Rating: </span>
+                    <span class="profile-label">Lowest Rating: </span>
+                </div>
+                <div class="profile-details">
+                    <span class="profile-detail">25, August, 2014</span>
+                    <span class="profile-detail">20, January, 2015</span>
+                    <span class="profile-detail">15</span>
+                    <span class="profile-detail">9</span>
+                    <span class="profile-detail">7.8</span>
+                    <span class="profile-detail">4.8</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="game-review" data-review-id="1">
+        <!-- Game review author -->
+        <div class="game-review-author">
+            <span class="review-btn author" data-user-id="2">TestUser123</span> (9/10) Wrote:
+        </div>
+        <!-- End review author -->
+        <!-- Game review -->
+        <div class="game-review-text text-collapser">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Bacon ipsum dolor amet spare ribs turducken salami tongue chuck ball tip
+                meatball frankfurter shoulder fatback jerky pork belly rump. Capicola
+                prosciutto filet mignon meatball tail. Jowl salami meatball spare ribs pig
+                tenderloin, ball tip hamburger ham swine turducken prosciutto. Picanha
+                filet mignon pastrami jowl pancetta kevin fatback. Salami spare ribs
+                jowl corned beef, cow chuck doner landjaeger prosciutto pig bacon strip
+                steak short ribs picanha. Short loin brisket tail bresaola short ribs.</p>
+        </div>
+        <!-- End game review -->
+    </div>
+
+</div>
 
 <footer>
     <!-- build:section layout.footer --><!-- /build -->
