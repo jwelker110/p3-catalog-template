@@ -19,6 +19,7 @@
         // Making sure the review button was not clicked on the tile
         // and the URL safe item name exists
         if (simpleName && !$(event.target).attr('data-toggle')) {
+            simpleName = simpleName.replace(' ', '+');
             $(location).attr('href', '/' + simpleName + '/' + gameId + '/'); // redirect user
         }
     });
